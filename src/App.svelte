@@ -12,15 +12,33 @@
   let mainElement;
 
   function prev(){
+    if(currentSongIndex == 0){
+      currentSongIndex = $musicList.length -1
+    }else{
+      currentSongIndex = (currentSongIndex - 1) % musicList.length;
+    }
+    playerState = "play";
 
   }
 
   function playPause(){
+    if(playPause == "play"){
+      playerState == "pause";
+      audioElement.pause();
+    }else{
+      playerState == "play";
+      audioElement.play();
+    }
 
   }
 
   function next(){
-    
+    currentSongIndex = (currentSongIndex + 1) % musicList.length;
+    playerState = "play";
+  }
+
+  function setSong(){
+
   }
 
 
@@ -61,6 +79,24 @@
             </button>
           </div>
       </div>
+    </div>
+
+    <div class="song-list">
+      {#each $musicList as music, i}
+        <div
+          class="{i == currentSongIndex ? "active":""}"
+          on:click="{()=>setSong(i)}"
+        >
+        <div class="avatar">
+          <img src={music.image} alt="">
+        </div>
+        <div class="song-details">
+          <h2>{music.name}</h2>
+          <p>{music.artist}</p>
+        </div>
+
+        </div>
+      {/each}
     </div>
   </div>
   

@@ -7,4 +7,12 @@ export const musicList = writable([
     name: 'End of Begining',
     artist: 'Djo',
   },
+
+  {
+    image: 'evergreen.jpg',
+    audio:
+      'Richy_Mitch_and_The_Coal_Miners_-_Evergreen_instrumental_(Hydr0.org).mp3',
+    name: 'EverGreen',
+    artist: 'Mitch',
+  },
 ]);
