@@ -13,4 +13,11 @@ export const musicList = writable([
     name: 'EverGreen',
     artist: 'Mitch',
   },
+
+  {
+    image: 'yechright.jpg',
+    audio: 'JOJI_-_YEAH_RIGHT_(Hydr0.org).mp3',
+    name: 'Yech right',
+    artist: 'Joji',
+  },
 ]);
