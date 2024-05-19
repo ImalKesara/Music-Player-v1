@@ -1,15 +1,27 @@
 <script>
 // @ts-nocheck
 
+  import {onMount} from 'svelte';
 	import { musicList } from './musiclist.js';
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
-  import {onMount} from 'svelte';
 
   let currentSongIndex = 0;
   let playerState = "play";
   let audioElement;
   let mainElement;
+
+  function prev(){
+
+  }
+
+  function playPause(){
+
+  }
+
+  function next(){
+    
+  }
 
 
 </script>
@@ -33,6 +45,19 @@
           <h2>{$musicList[currentSongIndex].name}</h2>
           <div class="controls">
             <button on:click={prev}>
+              <i class="fa fa-backward"></i>
+            </button>
+
+            <button on:click={playPause}>
+              {#if playerState == "play"}
+                <i class="fa fa-pause"></i>
+              {:else}
+                <i class="fa fa-play"></i>
+              {/if}
+            </button>
+
+            <button on:click={next}>
+              <i class="fa fa-forward"></i>
             </button>
           </div>
       </div>
