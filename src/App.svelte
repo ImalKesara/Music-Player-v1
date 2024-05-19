@@ -268,6 +268,14 @@
         border-radius: 20px;
         overflow: hidden;
       }
+
+      @media only screen and (max-width: 420px) {
+        .player {
+          width: 300px;
+         height: 300px;
+        }
+      }
+
       .player .current-song{
         height: 120px;
         padding: 10px;
@@ -321,7 +329,7 @@
         background: rgba(255, 255, 255,0.2);
         box-shadow: 0px 8px 32px 0 rgba(32, 38, 135,0.2);
         backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        /* border: 1px solid rgba(255, 255, 255, 0.4); */
         overflow-y: auto;
       }
 
