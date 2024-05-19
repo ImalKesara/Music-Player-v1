@@ -20,4 +20,10 @@ export const musicList = writable([
     name: 'Yech right',
     artist: 'Joji ',
   },
+  {
+    image: 'queen.jpg',
+    audio: 'Queen_-_I_Want_To_Break_Free_(Hydr0.org).mp3',
+    name: 'I want to break free',
+    artist: 'Queen ',
+  },
 ]);
